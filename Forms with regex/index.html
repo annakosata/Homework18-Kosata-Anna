@@ -39,9 +39,11 @@
 				$('#nameError').empty();
 				if(regex.test($(this).val())){
 					$('#nameError p').remove()
+					$('#button').attr('disabled', false)
 				} 
 				else {
 					$('#nameError').append('<p>Name is incorrect</p>')
+					$('#button').attr('disabled',true)
 				}
 			});
 			$('#pass').on('keyup', function() {
@@ -50,9 +52,11 @@
 				$('#passError').empty();
 				if(regex.test($(this).val())){
 					$('#passError p').remove()
+					$('#button').attr('disabled', false)
 				} 
 				else {
 					$('#passError').append('<p>Passport ID is incorrect</p>')
+					$('#button').attr('disabled',true)
 				}
 			});
 		});
