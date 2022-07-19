@@ -46,15 +46,21 @@ form{
 button{
 	display: block;
 	width: 100%;
-	margin: 30px auto 0;
+	margin: 0 auto 0;
 	background-color: greenyellow;
 	border: none;
 	height: 30px;
 }
-form div {
+.form__input {
 	margin-bottom: 20px;
+	height: 80px;
 }
 label {
 	display: block;
 	margin-bottom: 20px;
+}
+#nameError p, #passError p {
+	color: red;
+	font-style: italic;
+	font-size: 14px;
 }

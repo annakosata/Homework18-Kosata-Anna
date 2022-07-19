@@ -10,19 +10,21 @@
 	<script src="js/jquery.inputmask.js"></script>
 </head>
 <body>
-	<div class="form_container">
-		<form id="frm" action="#" enctype="" method="get">
-			<div>
+	<div class="form_container form">
+		<form action="#" enctype="" method="get">
+			<div class="form__input">
 				<label for="name">Your name in English</label>
 				<input type="text" id="name" name="name">
+				<div id="nameError"></div>
 			</div>
-			<div>
+			<div class="form__input">
 				<label for="tel">Your phone</label>
 				<input type="tel" id="tel" name="tel" value="">
 			</div>
-			<div>
+			<div class="form__input">
 				<label for="pass">Your Passport</label>
 				<input type="text" id="pass" name="passport" value="">
+				<div id="passError"></div>
 			</div>
 			<button type="submit" id="button">Submit</button>
 		</form>
@@ -34,23 +36,25 @@
 			$('#name').on('keyup', function() {
 				console.log($(this).val())
 				const regex = new RegExp ('^([A-Za-z]{2,23})$');
+				$('#nameError').empty();
 				if(regex.test($(this).val())){
-					$('#button').attr('disabled', false)
+					$('#nameError p').remove()
 				} 
 				else {
-					$('#button').attr('disabled',true)
+					$('#nameError').append('<p>Name is incorrect</p>')
 				}
 			});
 			$('#pass').on('keyup', function() {
 				console.log($(this).val())
 				const regex = new RegExp ('^([A-Za-z]{3}[0-9]{7}|[0-9]{8})$');
+				$('#passError').empty();
 				if(regex.test($(this).val())){
-					$('#button').attr('disabled', false)
+					$('#passError p').remove()
 				} 
 				else {
-					$('#button').attr('disabled',true)
+					$('#passError').append('<p>Passport ID is incorrect</p>')
 				}
-			});	
+			});
 		});
 	</script>
 </body>
