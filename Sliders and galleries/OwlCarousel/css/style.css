@@ -1,0 +1,107 @@
+@import "normalizecss.css";
+
+@font-face {
+    font-family: "Roboto" ;
+    src: url("../font/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RobotoBold" ;
+    src: url("../font/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Roboto" ;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+img{
+    display: block;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+h1{
+    text-transform: uppercase;
+    font-weight: 400;
+    text-align: center;
+    margin: 50px;
+}
+.owl-carousel{
+    position: relative;
+}
+.owl-carousel_slide {
+    transition: all 0.3s ease 0s;
+    max-width: 100%;
+    height: auto;
+}
+.owl-carousel_slide img{
+    width: 200px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.owl-nav{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    top: 25%;
+    z-index: 10;
+    font-size: 100px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    vertical-align: center;
+}
+.owl-prev button:hover , .owl-next button:hover, .owl-prev span:hover , .owl-next span:hover{
+    background: white;
+    color:#000;
+    text-decoration:none
+}
+.owl-nav .owl-prev {
+    left: 0;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.owl-nav .owl-next {
+    right: 0;
+    text-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.owl-dots{
+    padding: 20px 0;
+}
+.owl-theme .owl-dots .owl-dot.active span,.owl-theme .owl-dots .owl-dot:hover span {
+    background: yellow;
+}
+.gallery{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    row-gap: 30px;
+    column-gap: 20px;
+    padding: 30px 30px;
+
+}
+.gallery img{
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+}
+
+
+

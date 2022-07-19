@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Timeline</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="heading">
+        <h1>Batman: с 1966 по 2022</h1>
+        <span>хронология экранизаций</span>
+    </div>
+    <div class="container">
+
+        <div>
+            <ul>
+                <li>
+                    <div>
+                        <time>1966</time>
+                        <p>На волне успеха одноимённого сериала в 1966 году вышел полнометражный фильм. Сюжет рассказывает про Бэтмена и Робина, которые противостоят злодеями в лице Джокера, Пингвина, Загадочника и Женщины-кошки. Цель преступников — раз и навсегда покончить с двумя неутомимыми героями.
+                        </p>
+                        <img src="img/1966.webp" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1989</time>
+                        <p>
+                            Сюжет рассказывает о том, как юный Брюс Уэйн стал свидетелем убийства своих родителей, а когда вырос начал давать отпор преступности в Готэме. Главную роль исполнил Майкл Китон, также персонажей сыграли Ким Бейсингер, Роберт Вул и Джек Пэланс. Роль Джокера досталась харизматичному Джеку Николсону.
+                        </p>
+                        <img src="img/1989.jpg" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>1997</time>
+                        <p>
+                            Пожалуй, худший фильм про Бэтмена в истории. «Бэтмен и Робин» получил 11 номинаций «Золотая малина» (премия 1998-го), в том числе «Худший фильм года». А ещё фильм является худшим в истории человечества по версии интернет-голосования читателей журнала Empire.
+                        </p>
+                        <img src="img/1997.webp" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2005</time>
+                        <p>
+                            С выходом этого фильма франшиза «Бэтмен» обрела в кино вторую жизнь. Картина Кристофера Нолана была крайне тепло встречена как критиками, так и простыми зрителями. Мрачная атмосфера, глубокий сюжет и феноменальная игра актёров заставили по новому смотреть на жанр супергеройского кино.
+                        </p>
+                        <img src="img/2005.jpeg" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2016</time>
+                        <p>
+                            Фильм, снятый режиссёром Заком Снайдером. Картина основывается на комиксах «Бэтмен. Возвращение Тёмного Рыцаря» и «Смерть Супермена». Это второй фильм Расширенной вселенной DC после «Человека из стали». Роль Бэтмена исполнил Бен Аффлек, Супермена — Генри Кавилл, Лоис Лейн — Эми Адамс, Лекса Лютора — Джесси Айзенберг, а Чудо-женщину сыграла Галь Гадот.
+                        </p>
+                        <img src="img/2016.jpg" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <time>2022</time>
+                        <p>
+                            Перезапуск серии фильмов о Бэтмене. Режиссёр — Мэтт Ривз. Главного героя играет Роберт Паттинсон. Судя по трейлерам и отзывам, картина получилась мрачным детективом.
+                        </p>
+                        <img src="img/2022.jpg" alt="img">
+                        <a>Смотреть трейлер</a>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        var items = document.querySelectorAll("li");
+
+        function isItemInView(item){
+            var rect = item.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+
+        function callbackFunc() {
+            for (var i = 0; i < items.length; i++) {
+                if (isItemInView(items[i])) {
+                    items[i].classList.add("show");
+                }
+            }
+        }
+
+        // listen for events
+        window.addEventListener("load", callbackFunc);
+        window.addEventListener("resize", callbackFunc);
+        window.addEventListener("scroll", callbackFunc);
+        });
+    </script>
+
+</body>
+</html>

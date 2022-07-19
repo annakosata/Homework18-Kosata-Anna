@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Roboto" ;
+    src: url("../font/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RobotoBold" ;
+    src: url("../font/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+body{
+    overflow-x: hidden;
+    font-family: "Roboto" ;
+    font-size: 16px;
+    background-color: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    width: 300px;
+    height: 300px;
+    display: flex;
+}
+.swiper-slide img {
+    display: block;
+    max-width: 300px;
+    height: 300px;
+    object-fit: cover;
+}
+h1{
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 50px;
+    color: grey;
+}
+.gallery{
+    display: none;
+}
+.catalog{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 50px 20px;
+    justify-content: space-between;
+    text-align: center;
+}
+.catalog-item{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 10px;
+    padding: 20px;
+    transition: ease-in-out 0.3s all ;
+}
+.catalog-item:hover{
+    box-shadow: 0 7px 14px rgba(0,0,0,0.05), 0 5px 10px rgba(0,0,0,0.22);
+}
+
+
+.item-name{
+    font-weight: bold;
+}
+.item-price{
+    font-style: italic;
+}

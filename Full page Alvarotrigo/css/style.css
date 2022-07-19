@@ -1,0 +1,179 @@
+@charset "UTF-8";
+@import "normalizecss.css";
+
+@font-face {
+    font-family: "Roboto" ;
+    src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: "RobotoBold" ;
+    src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+body{
+    overflow-x: hidden;
+    font-family: "Roboto" ;
+    font-size: 20px;
+    background-color: #ffffff;
+}
+
+*{
+    box-sizing: border-box;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+}
+img{
+    display: block;
+}
+ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+input, button{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+button:hover , a:hover {
+    cursor: pointer;
+}
+h1, h2, h3 {
+    margin: 0;
+}
+#section-1{
+    background-image: url("../img/section1_img.jpeg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#menu {
+    display: flex;
+    max-width: 40%;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 70;
+    column-gap: 30px;
+}
+#menu li {
+    font: 1.5rem/1.7rem 'Roboto';
+    text-transform: uppercase;
+}
+#menu li:hover{
+    content: '';
+    border-bottom: 2px solid #fff;
+}
+#menu li.active{
+    content: '';
+    border-bottom: 2px solid #fff;
+}
+#section-1 div{
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 70%;
+    color: #fff;
+    margin: 0 auto;
+    padding: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    row-gap: 20px;
+}
+#section-1 div button{
+    max-width: 40%;
+    align-self: center;
+    font: 1.2rem/1.2rem 'RobotoBold';
+    border: none;
+    padding: 10px 30px;
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+#section-1 div button:hover{
+    background-color: #000;
+    color: #fff;
+}
+#section-2{
+    background-color: #fdd02d;
+}
+.slide div{
+    max-width: 70%;
+    margin: 0 auto;
+    color: #fff;
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    row-gap: 50px;
+}
+.slide:nth-of-type(2n){
+    background-color: orange;
+}
+.slide:nth-of-type(3n){
+    background-color: orchid;
+}
+.slide:nth-of-type(4n){
+    background-color: blueviolet;
+}
+.fp-slidesNav ul{
+    text-align: center;
+}
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: #fff;
+}
+.fp-next {
+    right: 70px;
+}
+.fp-prev {
+    left: 70px;
+}
+#section-3{
+    background-color: rgb(98, 121, 168);
+    display: flex;
+    padding: 50px;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 40px;
+}
+#section-3 div{
+    max-width: 25%;
+    display: flex;
+    flex-flow: column nowrap;
+    column-gap: 30px;
+    align-items: center;
+    text-align: center;
+    row-gap: 30px;
+    height: 300px;
+    padding: 20px;
+    background-color: #fff;
+}
+#section-3 div h3{
+    text-transform: uppercase;
+}
+#section-4{
+    background-color: rgb(187, 163, 201);
+    padding: 50px 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    column-gap: 50px;
+}
+#section-4 div{
+    display: flex;
+    flex-flow: column nowrap;
+    row-gap: 20px;
+    color: #fff;
+
+}
+.contact-name{
+    font-weight: 700;
+}

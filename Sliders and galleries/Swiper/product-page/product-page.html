@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Furniture-Product</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="js/jquery.izoomify.js"></script>
+</head>
+
+<body>
+    <div class="product-page">
+        <div class="product-images">
+            <div class="swiper mySwiper2">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide ">
+                        <img src="img/gallery/img-2.jpg" data-izoomify-magnify="2.5" data-izoomify-duration="300"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg"/>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg"/>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            <div thumbsSlider="" class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg" />
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="img/gallery/img-2.jpg" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="product-info">
+            <span class="product-name">Vase Set</span>
+            <span class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam beatae consequuntur ea, et fugiat hic ipsa molestias neque officia quod repellat tempora totam! Ab accusantium alias aliquid asperiores blanditiis commodi consectetur cupiditate dicta distinctio doloremque eaque earum eius eligendi est facilis fugit hic ipsa ipsam, ipsum iure laborum modi necessitatibus nesciunt, nihil nobis non odio quam qui quia quidem reiciendis repudiandae saepe sequi suscipit unde vel voluptates! Blanditiis commodi consectetur doloremque eligendi enim fuga fugiat ipsam laborum, nesciunt perspiciatis reiciendis sapiente, soluta tempora veritatis voluptatum! Ab alias aliquam animi aspernatur at, eveniet ex id illo laborum, magnam nostrum obcaecati odio officia praesentium ratione rerum velit. A deleniti earum et fugiat iusto, laudantium libero, minus nihil placeat provident soluta vitae!</span>
+            <span class="product-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, aperiam beatae consequuntur ea, et fugiat hic ipsa molestias neque officia quod repellat tempora totam! Ab accusantium alias aliquid asperiores blanditiis commodi consectetur cupiditate dicta distinctio doloremque eaque earum eius eligendi est facilis fugit hic ipsa ipsam, ipsum iure laborum modi necessitatibus nesciunt, nihil nobis non odio quam qui quia quidem reiciendis repudiandae saepe sequi suscipit unde vel voluptates! Blanditiis commodi consectetur doloremque eligendi enim fuga fugiat ipsam laborum, nesciunt perspiciatis reiciendis sapiente, soluta tempora veritatis voluptatum! Ab alias aliquam animi aspernatur at, eveniet ex id illo laborum, magnam nostrum obcaecati odio officia praesentium ratione rerum velit. A deleniti earum et fugiat iusto, laudantium libero, minus nihil placeat provident soluta vitae!</span>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 10,
+            slidesPerView: 4,
+            freeMode: true,
+            watchSlidesProgress: true,
+        });
+        var swiper2 = new Swiper(".mySwiper2", {
+            spaceBetween: 10,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            thumbs: {
+                swiper: swiper,
+            },
+        });
+    </script>
+
+    <script>
+        $(function(){
+            $('.mySwiper2').izoomify();
+        });
+        $('.swiper-slide').izoomify({
+            url:"img/gallery/img-2.jpg",
+            magnify: 2.5,
+            duration: 300,
+        });
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Swiper</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/lightbox.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <h1>Choose your room style</h1>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <a data-lightbox="interior-1" href="img/gallery/img-1.jpg" data-title="Interior 1">
+                    <img src="img/interior-1.jpg" alt="img">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-lightbox="interior-2" href="img/gallery/img-2.jpg" data-title="Interior 2">
+                    <img src="img/interior-2.jpg" alt="img">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-lightbox="interior-3" href="img/gallery/img-5.jpg" data-title="Interior 3">
+                    <img src="img/interior-3.jpg" alt="img">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-lightbox="interior-4" href="img/gallery/img-3.jpg" data-title="Interior 4">
+                    <img src="img/interior-4.jpg" alt="img">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <a data-lightbox="interior-5" href="img/gallery/img-4.jpg" data-title="Interior 5">
+                    <img src="img/interior-5.jpg" alt="img">
+                </a>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-6.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-7.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-8.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-9.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-10.jpg" alt="img">
+            </div>
+            <div class="swiper-slide">
+                <img src="img/interior-11.jpg" alt="img">
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+    <div class="gallery">
+        <a data-lightbox="interior-1" href="img/gallery/img-2.jpg" data-title="Interior 1"></a>
+        <a data-lightbox="interior-1" href="img/gallery/img-3.jpg" data-title="Interior 1"></a>
+        <a data-lightbox="interior-1" href="img/gallery/img-4.jpg" data-title="Interior 1"></a>
+        <a data-lightbox="interior-1" href="img/gallery/img-5.jpg" data-title="Interior 1"></a>
+
+        <a data-lightbox="interior-2" href="img/gallery/img-3.jpg" data-title="Interior 2"></a>
+        <a data-lightbox="interior-2" href="img/gallery/img-5.jpg" data-title="Interior 2"></a>
+        <a data-lightbox="interior-2" href="img/gallery/img-4.jpg" data-title="Interior 2"></a>
+
+        <a data-lightbox="interior-3" href="img/gallery/img-1.jpg" data-title="Interior 3"></a>
+        <a data-lightbox="interior-3" href="img/gallery/img-4.jpg" data-title="Interior 3"></a>
+        <a data-lightbox="interior-3" href="img/gallery/img-2.jpg" data-title="Interior 3"></a>
+
+        <a data-lightbox="interior-4" href="img/gallery/img-1.jpg" data-title="Interior 4"></a>
+        <a data-lightbox="interior-4" href="img/gallery/img-5.jpg" data-title="Interior 4"></a>
+
+        <a data-lightbox="interior-5" href="img/gallery/img-1.jpg" data-title="Interior 5"></a>
+        <a data-lightbox="interior-5" href="img/gallery/img-3.jpg" data-title="Interior 5"></a>
+
+
+    </div>
+
+    <h1>Products</h1>
+    <div class="catalog">
+        <a href="product-page/product-page.html">
+            <div class="catalog-item">
+                <img src="img/gallery/img-2.jpg">
+                <span class="item-name">Vase Set</span>
+                <span class="item-price">30$</span>
+            </div>
+        </a>
+        <a href="product-page/product-page.html">
+            <div class="catalog-item">
+                <img src="img/gallery/img-2.jpg">
+                <span class="item-name">Vase Set</span>
+                <span class="item-price">30$</span>
+            </div>
+        </a>
+        <a href="product-page/product-page.html">
+            <div class="catalog-item">
+                <img src="img/gallery/img-2.jpg">
+                <span class="item-name">Vase Set</span>
+                <span class="item-price">30$</span>
+            </div>
+        </a>
+    </div>
+
+
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: true,
+                loop: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+        });
+    </script>
+
+    <script src="js/lightbox.js"></script>
+</body>
+
+</html>
